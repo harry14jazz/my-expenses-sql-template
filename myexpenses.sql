@@ -37,4 +37,6 @@ CREATE TABLE expanses(
     PRIMARY KEY (id),
 	CONSTRAINT FK_CategoryExpenses FOREIGN KEY (id_category) 
     REFERENCES ex_category(category_id)
+	CONSTRAINT FK_SubCategoryExpenses FOREIGN KEY (id_sub_category) 
+    REFERENCES my_expenses.sub_category(sub_category_id);
 );
